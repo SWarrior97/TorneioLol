@@ -94,11 +94,15 @@ class App extends Component {
           </section>
         );
       case 2:
-      return(
-         <div className="center">
-           <h1 className="msgSucess">Register done</h1>
-         </div>
-      );
+        return(
+           <div className="center">
+             <h1 className="msgSucess">Register done</h1>
+           </div>
+        );
+      default:
+        return(
+          <h1>ERROR</h1>
+        );
     }
     
   }
