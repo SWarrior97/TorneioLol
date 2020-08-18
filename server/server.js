@@ -34,4 +34,6 @@ app.use(express.static(path.join(__dirname,'public')))
 
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT,console.log(`Server running in ${process.env.NODE_ENV} on port ${PORT}`))
+const HOSTNAME = process.env.HOSTNAME
+
+app.listen(PORT,HOSTNAME,console.log(`Server running in ${process.env.NODE_ENV} on port ${PORT}`))
