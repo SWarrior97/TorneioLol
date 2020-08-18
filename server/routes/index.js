@@ -15,7 +15,7 @@ app.use(cors())
 router.post('/register',async (req,res) =>{
 	 try{
 		await User.create(req.body)
-		res.send('Register confirm')
+		res.render('regist')
 	}catch(err){
 		console.log(err)
 		res.render('error/500')
@@ -24,7 +24,10 @@ router.post('/register',async (req,res) =>{
 
 
 router.get('/',(req,res) =>{
-	res.send("hello")
+	res.render('main',{
+      layout:'main.hbs'
+    })
+
 })
 
 module.exports = router

@@ -1,0 +1,49 @@
+<section class="hero-bg">
+        <div class="center">
+            <form action="/register" method="POST">
+                <br>
+                <label for="name">Name</label>
+                <input class="inputForm" type="text" name="name" id="name" placeholder="Insert Name">
+                <br>
+                <label for="summoner">Summoner Name</label>
+                <input class="inputForm" type="text" name="summoner" id="summoner" placeholder="Insert Summoner Name">
+                <br>
+                <label for="elo">Elo</label>
+                <select class="inputForm" name="elo" id="elo">
+                    <option value="iron">Iron</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="platinun">Platinun</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="master">Master</option>
+                    <option value="grandmaster">GrandMaster</option>
+                    <option value="challenger">Challenger</option>
+                  </select>
+                <br>
+                <label for="main">Main Role</label>
+                <select class="inputForm" name="main" id="main">
+                    <option value="top">Top</option>
+                    <option value="jungler">Jungler</option>
+                    <option value="mid">Mid</option>
+                    <option value="adc">Adc</option>
+                    <option value="support">Support</option>
+                    <option value="fill">Fill</option>
+                  </select>
+                <br>
+                <label for="secondary">Secondary Role</label>
+                <select class="inputForm" name="secondary" id="secondary">
+                    <option value="top">Top</option>
+                    <option value="jungler">Jungler</option>
+                    <option value="mid">Mid</option>
+                    <option value="adc">Adc</option>
+                    <option value="support">Support</option>
+                    <option value="fill">Fill</option>
+                  </select>
+
+                <div class="buttons">
+                    <input type="submit" value="Save" class="submitButton">
+                </div>
+            </form>
+        </div>
+    </section>
