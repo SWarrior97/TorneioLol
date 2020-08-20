@@ -33,6 +33,37 @@ router.get('/bracket',async (req,res) =>{
 
 	if(size % 2 != 0){
 		//impar
+		let randomOut = Math.floor(Math.random() * size/2);
+		randomNumber.push(randomOut)
+
+		for(let i=0;i<size/2;i++){
+			if(i!= randomOut){
+				let random = Math.floor(Math.random() * size);
+				let random2 = Math.floor(Math.random() * size);
+
+				while(randomNumber.includes(random)){
+					random = Math.floor(Math.random() * size);
+				}
+
+				randomNumber.push(random)
+
+				while(randomNumber.includes(random2)){
+					random2 = Math.floor(Math.random() * size);
+				}
+				
+				randomNumber.push(random2)
+
+				matches.push({
+					player1:users[random].summoner,
+					player2:users[random2].summoner,
+					winner:''
+				})
+			}
+		}
+
+		matches.push({
+			player1:users[randomOut].summoner
+		})
 	}else{
 		//par
 		for(let i=0;i<size/2;i++){
@@ -61,7 +92,12 @@ router.get('/bracket',async (req,res) =>{
 
 	size = matches.length;
 
-	console.log(matches)
+	//console.log(matches)
+
+	res.render('bracket',{
+      layout:'bracket.hbs',
+      matches
+    })
 })
 
 
